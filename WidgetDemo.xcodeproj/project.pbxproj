@@ -14,6 +14,8 @@
 		3B05F0C524A8AFA00033F768 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B05F0C424A8AFA00033F768 /* Preview Assets.xcassets */; };
 		3B05F0C824A8AFA00033F768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B05F0C624A8AFA00033F768 /* LaunchScreen.storyboard */; };
 		3B05F0D124A8B09B0033F768 /* StatusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05F0D024A8B09B0033F768 /* StatusData.swift */; };
+		3B32B52C24AA2FC70050F77D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B32B52B24AA2FC70050F77D /* MapView.swift */; };
+		3B32B52E24AA30460050F77D /* MapContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B32B52D24AA30460050F77D /* MapContentView.swift */; };
 		3BA5E93324A8B31800736B3D /* ColorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA5E93224A8B31800736B3D /* ColorUtility.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		3B05F0C724A8AFA00033F768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B05F0C924A8AFA00033F768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B05F0D024A8B09B0033F768 /* StatusData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusData.swift; sourceTree = "<group>"; };
+		3B32B52B24AA2FC70050F77D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		3B32B52D24AA30460050F77D /* MapContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContentView.swift; sourceTree = "<group>"; };
 		3BA5E93224A8B31800736B3D /* ColorUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +73,8 @@
 				3B05F0C624A8AFA00033F768 /* LaunchScreen.storyboard */,
 				3B05F0C924A8AFA00033F768 /* Info.plist */,
 				3B05F0C324A8AFA00033F768 /* Preview Content */,
+				3B32B52B24AA2FC70050F77D /* MapView.swift */,
+				3B32B52D24AA30460050F77D /* MapContentView.swift */,
 			);
 			path = WidgetDemo;
 			sourceTree = "<group>";
@@ -169,8 +175,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B05F0BC24A8AFA00033F768 /* AppDelegate.swift in Sources */,
+				3B32B52C24AA2FC70050F77D /* MapView.swift in Sources */,
 				3B05F0D124A8B09B0033F768 /* StatusData.swift in Sources */,
 				3B05F0BE24A8AFA00033F768 /* SceneDelegate.swift in Sources */,
+				3B32B52E24AA30460050F77D /* MapContentView.swift in Sources */,
 				3BA5E93324A8B31800736B3D /* ColorUtility.swift in Sources */,
 				3B05F0C024A8AFA00033F768 /* ContentView.swift in Sources */,
 			);

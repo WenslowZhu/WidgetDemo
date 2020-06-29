@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import CoreLocation
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView(data: StatusData.demo)
+//        let contentView = ContentView(data: StatusData.demo)
+        let contentView = MapContentView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
@@ -28,6 +30,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
+        }
+        
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
+            CLLocationManager().requestWhenInUseAuthorization()
         }
     }
 
