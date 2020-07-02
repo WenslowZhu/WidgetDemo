@@ -9,11 +9,48 @@
 import Foundation
 import SwiftUI
 
-struct StatusData {
-    var progress: CGFloat
-    var isCharging: Bool
+class StatusData: ObservableObject {
+    @Published var powerPercent: CGFloat
+    @Published var fuelPercent: CGFloat
+    @Published var fuelDuration: Int
+    @Published var oilPercent: CGFloat
+    @Published var mileagePercent: CGFloat
+    @Published var mileage: Int
+    @Published var isCharging: Bool
+    
+    init(powerPercent: CGFloat,
+         fuelPercent: CGFloat,
+         fuelDuration: Int,
+         oilPercent: CGFloat,
+         mileagePercent: CGFloat,
+         mileage: Int,
+         isCharging: Bool) {
+        self.powerPercent = powerPercent
+        self.fuelPercent = fuelPercent
+        self.fuelDuration = fuelDuration
+        self.oilPercent = oilPercent
+        self.mileagePercent = mileagePercent
+        self.mileage = mileage
+        self.isCharging = isCharging
+    }
     
     static var demo: StatusData {
-        StatusData(progress: 0.0, isCharging: false)
+        StatusData(powerPercent: 0.0,
+                   fuelPercent: 0.0,
+                   fuelDuration: 0,
+                   oilPercent: 0.0,
+                   mileagePercent: 0.0,
+                   mileage: 0,
+                   isCharging: false)
+    }
+    
+    static var evDemo: StatusData {
+        StatusData(powerPercent: 0.7,
+                   fuelPercent: 0.0,
+                   fuelDuration: 0,
+                   oilPercent: 0.0,
+                   mileagePercent: 0.0,
+                   mileage: 0,
+                   isCharging: true)
     }
 }

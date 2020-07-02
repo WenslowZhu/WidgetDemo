@@ -28,6 +28,9 @@ final class MapView: NSObject, UIViewRepresentable {
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
         
+        let anotation = VehicleAnotation(coordinate: location)
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotation(anotation)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             var rect = self.mapView.visibleMapRect
@@ -41,5 +44,18 @@ final class MapView: NSObject, UIViewRepresentable {
 extension MapView: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         relocation(location: userLocation.coordinate)
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let anotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Vehicle")
+        return anotationView
+    }
+}
+
+private class VehicleAnotation: NSObject, MKAnnotation {
+    var coordinate: CLLocationCoordinate2D
+    
+    init(coordinate: CLLocationCoordinate2D) {
+        self.coordinate = coordinate
     }
 }
